@@ -18,6 +18,8 @@ echo running with %compile_cores% cores
 
 "%vproject%\..\bin\vrad.exe" -game "%vproject%" -threads %compile_cores% "rp_eastcoast_boringbuilders"
 
+"%vproject%\..\..\Team Fortress 2\bin\bspzip.exe" -repack -compress "rp_eastcoast_boringbuilders.bsp"
+
 @echo off
 :exit
 pause
