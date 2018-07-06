@@ -15,19 +15,15 @@ end
 
 local start_time = os.time()
 
-local num_cores = os.getenv("NUMBER_OF_PROCESSORS")
-print("machine has " .. num_cores .. " cores, running with " .. string.format("%i", num_cores - 1))
-num_cores = string.format("%i", num_cores - 1)
-
-execute(vproject .. [[\..\bin\vbsp.exe -notjunc -game "]] .. vproject .. [[" -threads ]] .. num_cores .. [[ "rp_eastcoast_boringbuilders"]])
+execute(vproject .. [[\..\bin\vbsp.exe -notjunc -game "]] .. vproject .. [[" -low "rp_eastcoast_boringbuilders"]])
 if file_exists("rp_eastcoast_boringbuilders.lin") then
 	print("leak!!!!!!!!")
 	os.exit()
 end
 
-execute(vproject .. [[\..\bin\vvis.exe -game "]] .. vproject .. [[" -threads ]] .. num_cores .. [[ "rp_eastcoast_boringbuilders"]])
+execute(vproject .. [[\..\bin\vvis.exe -game "]] .. vproject .. [[" -low "rp_eastcoast_boringbuilders"]])
 
-execute(vproject .. [[\..\bin\vrad.exe -game "]] .. vproject .. [[" -threads ]] .. num_cores .. [[ "rp_eastcoast_boringbuilders"]])
+execute(vproject .. [[\..\bin\vrad.exe -game "]] .. vproject .. [[" -low "rp_eastcoast_boringbuilders"]])
 
 local function recurse_and_add(local_path)
 	--print("local path", local_path)
