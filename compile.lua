@@ -43,6 +43,8 @@ execute([[""]] .. vproject .. [[\..\..\Team Fortress 2\bin\bspzip.exe" -repack -
 
 execute([[copy rp_eastcoast_boringbuilders.bsp "]] .. vproject .. [[\maps\rp_eastcoast_boringbuilders.bsp"]])
 
+execute([[copy "rp_eastcoast_boringbuilders.bsp" "workshop\maps\rp_eastcoast_boringbuilders.bsp"]])
+
 local seconds = os.time() - start_time
 print(string.format("\nProgram completed in %02d:%02d:%02d.", math.floor(seconds / 60 / 60), math.floor((seconds / 60) % 60), math.floor(seconds % 60)))
 os.exit()
