@@ -15,7 +15,7 @@ end
 
 local start_time = os.time()
 
-execute(vproject .. [[\..\bin\vbsp.exe -game "]] .. vproject .. [[" -low "rp_eastcoast_boringbuilders"]])
+execute(vproject .. [[\..\bin\vbsp.exe -notjunc -game "]] .. vproject .. [[" -low "rp_eastcoast_boringbuilders"]])
 if file_exists("rp_eastcoast_boringbuilders.lin") then
 	print("leak!!!!!!!!")
 	os.exit()
