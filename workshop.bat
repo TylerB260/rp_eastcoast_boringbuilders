@@ -1,2 +1,0 @@
-lua workshop.lua
-pause
